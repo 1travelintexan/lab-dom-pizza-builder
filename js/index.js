@@ -126,14 +126,13 @@ function renderButtons() {
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
-  let originalPrice = 21;
   let total = document.querySelector('.panel strong');
-  if (state.activePep) originalPrice += 1;
-  if (state.activeMush) originalPrice += 1;
-  if (state.activePepper) originalPrice += 1;
-  if (state.activeSauce) originalPrice += 3;
-  if (state.activeGluten) originalPrice += 5;
-  total.innerHTML = originalPrice;
+  if (state.activePep) basePrice += 1;
+  if (state.activeMush) basePrice += 1;
+  if (state.activePepper) basePrice += 1;
+  if (state.activeSauce) basePrice += 3;
+  if (state.activeGluten) basePrice += 5;
+  total.innerHTML = basePrice;
 }
 
 renderEverything();
